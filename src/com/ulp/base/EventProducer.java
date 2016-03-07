@@ -15,11 +15,11 @@ public class EventProducer {
 
     KafkaProducer<String, String> producer;
 
-    public EventProducer(){
+    public EventProducer() {
 
     }
 
-    public EventProducer(String configFile){
+    public EventProducer(String configFile) {
         try {
             InputStream props = Resources.getResource(configFile).openStream();
             Properties properties = new Properties();
@@ -30,7 +30,7 @@ public class EventProducer {
         }
     }
 
-    public void sendEvent(){
+    public void sendEvent() {
         try {
             for (int i = 0; i < 1000000; i++) {
                 // send lots of messages
